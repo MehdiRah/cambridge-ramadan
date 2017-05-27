@@ -4,16 +4,16 @@
         fasting : false
     },
     {   
-        time : "06/07/2016 02:44:00", 
-        fasting : false
-    },
-    {   
-        time : "06/19/2015 21:27:00", 
+        time : "05/27/2017 21:08:00", 
         fasting : true
     },
     {   
-        time : "06/20/2015 02:38:00", 
-        fasting: false
+        time : "05/28/2017 02:55:00", 
+        fasting : false
+    },
+    {   
+        time : "05/28/2017 21:09:00", 
+        fasting: true
     },
     {   
         time : "06/20/2015 21:27:00", 

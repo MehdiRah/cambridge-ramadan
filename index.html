@@ -51,7 +51,7 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll" href="#about">Next Dates</a>
                     </li>
                 </ul>
             </div>
@@ -65,11 +65,13 @@
         <div class="intro-body">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <!-- <h1 class="brand-heading">Grayscale</h1> -->
-                        <div class="clock" style="margin-left: 20%;"></div>
+                    <div class="col-md-8 col-md-offset-2">                    
+                        <h1 class="intro-text" id="nextCountdownName"></h1>
                         <br/>
-                        <p class="intro-text" id="nextCountdownName"></p>
+                        <div class="clock" style="margin-left: 20%;"></div>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -84,7 +86,9 @@
         <div class="download-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <p>Please use this to arrange your time accordingly</p>
+                    <h3 id="upcomingContent"></h3>
+                    <br/>
+                    <h3 id="beyondContent"></h3>
                 </div>
             </div>
         </div>
@@ -119,11 +123,13 @@
     <script type="text/javascript">
         var clock;
         var targetDate;
+        var beyondDate;
         var isFasting;
         
         $(document).ready(function() {
 
-            getNextTargetDate();
+            setNextTargetDate();
+            setBeyondTargetDate();
             
             clock = $('.clock').FlipClock(targetDate,{
                 clockFace: 'HourlyCounter',
@@ -134,24 +140,41 @@
             clock.start();
 
             $('#nextCountdownName').text((isFasting ? 'Next Iftar' : 'Next Sehri'));
+            $('#upcomingContent').text((isFasting ? 'Iftar: ' +  roundDateToNearestMinute(targetDate) : 'Sehri: ' +  roundDateToNearestMinute(targetDate)));
+            $('#beyondContent').text((!isFasting ? 'Iftar: ' +  beyondDate : 'Sehri: ' +  beyondDate));
 
         });
 
-        function getNextTargetDate(){
+        function setNextTargetDate(){
             var now = Date.now();
-
             $.each(jsonTimetable, function(f,v){
                 targetDate = new Date(v.time);
+                
                 if (now < targetDate){
                     targetDate = new Date(v.time);
                     isFasting = v.fasting;
                     return false;
                 }
+  
             })
-
-
-
         }
+
+        function setBeyondTargetDate(){
+            $.each(jsonTimetable, function(f,v){
+                beyondDate = new Date(v.time);
+                if (beyondDate > targetDate){
+                    beyondDate = new Date(v.time);
+                    return false;
+                }
+  
+            })
+        }
+
+        function roundDateToNearestMinute(inputDateTime){
+            var coeff = 1000 * 60 * 1;
+            return rounded = new Date(Math.round(inputDateTime.getTime() / coeff) * coeff);
+        }
+
     </script>
 
 
