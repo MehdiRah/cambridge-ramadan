@@ -135,17 +135,19 @@
             setNextTargetDate();
             setBeyondTargetDate();
 
-            targetDateInSeconds = targetDate.getTime() / 1000;
+            //targetDateInSeconds = targetDate.getTime() / 1000;
+
+            // Workaround for flipclock.js timing sync issue
+            var diff = targetDate.getTime() - new Date().getTime();
+            var showtime = Math.floor(diff/1000);
             
-            clock = $('.clock').FlipClock(targetDateInSeconds,{
+            clock = $('.clock').FlipClock({
                 clockFace: 'HourlyCounter',
                 autoStart: false,
                 countdown: true
             });
 
-            console.log(targetDate);
-            //WORKING ON SLOWING THE COUNTDOWN AS ITS TOO FAST
-            // clock.setTime(targetDateInSeconds); 
+            clock.setTime(showtime); 
             clock.start();
 
             $('#nextCountdownName').text((isFasting ? 'Next Iftar' : 'Next Sehri'));
