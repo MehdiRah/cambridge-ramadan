@@ -24,7 +24,10 @@
 
     <!-- Flipcounter CSS -->
 
-    <link href="css/flipclock.css" rel="stylesheet">
+    <!-- <link href="css/flipclock.css" rel="stylesheet"> -->
+
+    <link rel="stylesheet" href="http://hilios.github.io/jQuery.countdown/css/main.css">
+    <link rel="stylesheet" href="http://hilios.github.io/jQuery.countdown/css/syntax.css">
 
 
 </head>
@@ -119,6 +122,9 @@
     <!-- Flipclock javascript -->
     <script src="js/flipclock.js"></script>
 
+    <!-- Flipclock javascript -->
+    <script src="js/jquery.countdown.min.js"></script>
+
     <!-- Ramadan timetable -->
 
     <script src="js/RamadanTimetable.js"></script>
@@ -135,18 +141,20 @@
             setNextTargetDate();
             setBeyondTargetDate();
 
-            targetDateInSeconds = targetDate.getTime() / 1000;
+            targetDateInSeconds = targetDate.getTime();
             
-            clock = $('.clock').FlipClock(targetDateInSeconds,{
-                clockFace: 'HourlyCounter',
-                autoStart: false,
-                countdown: true
-            });
+            // clock = $('.clock').FlipClock(targetDateInSeconds,{
+            //     clockFace: 'HourlyCounter',
+            //     autoStart: false,
+            //     countdown: true
+            // });
+
+            clock = $('.clock').countdown(targetDateInSeconds);
 
             console.log(targetDate);
             //WORKING ON SLOWING THE COUNTDOWN AS ITS TOO FAST
             // clock.setTime(targetDateInSeconds); 
-            clock.start();
+            // clock.start();
 
             $('#nextCountdownName').text((isFasting ? 'Next Iftar' : 'Next Sehri'));
             $('#upcomingContent').text((isFasting ? 'Iftar: ' +  roundDateToNearestMinute(targetDate) : 'Sehri: ' +  roundDateToNearestMinute(targetDate)));
