@@ -128,18 +128,24 @@
         var targetDate;
         var beyondDate;
         var isFasting;
+        var targetDateInSeconds;
         
         $(document).ready(function() {
 
             setNextTargetDate();
             setBeyondTargetDate();
+
+            targetDateInSeconds = targetDate.getTime() / 1000;
             
-            clock = $('.clock').FlipClock(targetDate,{
+            clock = $('.clock').FlipClock(targetDateInSeconds,{
                 clockFace: 'HourlyCounter',
+                autoStart: false,
                 countdown: true
             });
 
-            clock.setTime(targetDate); 
+            console.log(targetDate);
+            //WORKING ON SLOWING THE COUNTDOWN AS ITS TOO FAST
+            // clock.setTime(targetDateInSeconds); 
             clock.start();
 
             $('#nextCountdownName').text((isFasting ? 'Next Iftar' : 'Next Sehri'));
