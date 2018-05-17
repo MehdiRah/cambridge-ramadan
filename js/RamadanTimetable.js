@@ -1,5 +1,77 @@
 ﻿var jsonTimetable = [
     {   
+        time : "05/18/2017 03:11:00", 
+        fasting : false
+    },
+    {   
+        time : "05/18/2017 20:55:00", 
+        fasting : true
+    },
+    {   
+        time : "05/19/2017 03:09:00", 
+        fasting : false
+    },
+    {   
+        time : "05/19/2017 20:57:00", 
+        fasting : true
+    },
+    {   
+        time : "05/20/2017 03:08:00", 
+        fasting : false
+    },
+    {   
+        time : "05/20/2017 20:58:00", 
+        fasting : true
+    },
+    {   
+        time : "05/21/2017 03:06:00", 
+        fasting : false
+    },
+    {   
+        time : "05/21/2017 21:00:00", 
+        fasting : true
+    },
+    {   
+        time : "05/22/2017 03:04:00", 
+        fasting : false
+    },
+    {   
+        time : "05/22/2017 21:01:00", 
+        fasting : true
+    },
+    {   
+        time : "05/23/2017 03:03:00", 
+        fasting : false
+    },
+    {   
+        time : "05/23/2017 21:03:00", 
+        fasting : true
+    },
+    {   
+        time : "05/24/2017 03:01:00", 
+        fasting : false
+    },
+    {   
+        time : "05/24/2017 21:04:00", 
+        fasting : true
+    },
+    {   
+        time : "05/25/2017 03:00:00", 
+        fasting : false
+    },
+    {   
+        time : "05/25/2017 21:05:00", 
+        fasting : true
+    },
+    {   
+        time : "05/26/2017 02:58:00", 
+        fasting : false
+    },
+    {   
+        time : "05/26/2017 21:07:00", 
+        fasting : true
+    },
+    {   
         time : "05/27/2017 02:57:00", 
         fasting : false
     },
@@ -8,7 +80,7 @@
         fasting : true
     },
     {   
-        time : "05/28/2017 02:55:00", 
+        time : "05/28/2017 02:56:00", 
         fasting : false
     },
     {   
@@ -20,7 +92,7 @@
         fasting : false
     },
     {   
-        time : "05/29/2017 21:11:00", 
+        time : "05/29/2017 21:10:00", 
         fasting: true
     },
     {   
@@ -40,7 +112,7 @@
         fasting : true
     },
     {   
-        time : "06/01/2017 02:50:00", 
+        time : "06/01/2017 02:51:00", 
         fasting: false
     },
     {   
@@ -88,7 +160,7 @@
         fasting : true
     },
     {   
-        time : "06/07/2017 02:44:00", 
+        time : "06/07/2017 02:45:00", 
         fasting: false
     },
     {   
@@ -108,15 +180,7 @@
         fasting: false
     },
     {   
-        time : "06/09/2017 21:22:00", 
-        fasting : true
-    },
-    {   
-        time : "06/09/2017 02:43:00", 
-        fasting: false
-    },
-    {   
-        time : "06/09/2017 21:22:00", 
+        time : "06/09/2017 21:21:00", 
         fasting : true
     },
     {   
@@ -158,93 +222,5 @@
     {   
         time : "06/14/2017 21:25:00", 
         fasting : true
-    },
-    {   
-        time : "06/15/2017 02:39:00", 
-        fasting: false
-    },
-    {   
-        time : "06/15/2017 21:25:00", 
-        fasting : true
-    },
-    {   
-        time : "06/16/2017 02:39:00", 
-        fasting: false
-    },
-    {   
-        time : "06/16/2017 21:26:00", 
-        fasting : true
-    },
-    {   
-        time : "06/17/2017 02:39:00", 
-        fasting: false
-    },
-    {   
-        time : "06/17/2017 21:26:00", 
-        fasting : true
-    },
-    {   
-        time : "06/18/2017 02:38:00", 
-        fasting: false
-    },
-    {   
-        time : "06/18/2017 21:27:00", 
-        fasting : true
-    },
-    {
-        time: "06/19/2017 02:38:00",
-        fasting: false
-    },
-    {
-        time: "06/19/2017 21:27:00",
-        fasting: true
-    },
-    {
-        time: "06/20/2017 02:38:00",
-        fasting: false
-    },
-    {
-        time: "06/20/2017 21:27:00",
-        fasting: true
-    },
-    {
-        time: "06/21/2017 02:38:00",
-        fasting: false
-    },
-    {
-        time: "06/21/2017 21:28:00",
-        fasting: true
-    },
-    {
-        time: "06/22/2017 02:38:00",
-        fasting: false
-    },
-    {
-        time: "06/22/2017 21:28:00",
-        fasting: true
-    },
-    {
-        time: "06/23/2017 02:38:00",
-        fasting: false
-    },
-    {
-        time: "06/23/2017 21:28:00",
-        fasting: true
-    },
-    {
-        time: "06/24/2017 02:39:00",
-        fasting: false
-    },
-    {
-        time: "06/24/2017 21:28:00",
-        fasting: true
-    },
-    {
-        time: "06/25/2017 02:40:00",
-        fasting: false
-    },
-    {
-        time: "06/25/2017 21:28:00",
-        fasting: true
     }
 ]
