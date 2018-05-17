@@ -1,5 +1,13 @@
 ﻿var jsonTimetable = [
     {   
+        time : "05/17/2017 03:13:00", 
+        fasting : false
+    },
+    {   
+        time : "05/17/2017 20:54:00", 
+        fasting : true
+    },
+    {   
         time : "05/18/2017 03:11:00", 
         fasting : false
     },
