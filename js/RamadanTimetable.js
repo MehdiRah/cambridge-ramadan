@@ -1,6 +1,6 @@
 ﻿var jsonTimetable = [
     {   
-        time : "04/15/2021 04:22:00", 
+        time : "04/03/2022 04:53:00", 
         fasting : false
     },
     {   
